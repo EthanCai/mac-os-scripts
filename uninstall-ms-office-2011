@@ -16,7 +16,7 @@ function delete() {
                 line=$(eval "ls ${item} 2>/dev/null | wc -l")
                 if [ $line -gt 0 ]
                     then
-                    rm -f $item
+                    rm -f "$item"
                     echo -e [files] $item is deleted "\n"
                     continue
                 fi
@@ -24,14 +24,14 @@ function delete() {
 
         if [ -f "$item" ]
             then
-            rm -f $item
+            rm -f "$item"
             echo -e [file] $item is deleted "\n"
             continue
         fi
 
         if [ -d "$item" ]
             then
-            rm -drf $item
+            rm -drf "$item"
             echo -e [folder] $item is deleted "\n"
             continue
         fi
@@ -73,16 +73,15 @@ delete
 # 3. 删除Microsoft文件夹和Office 2011文件
 # /Library/Automator
 # /Library/Application Support/Microsoft/
-# /Library/Fonts/Microsoft
+# /Library/Fonts/Microsoft              如要删除，请把此路径加到folders数组中
 # /Library/Internet Plug-Ins/           all SharePoint files
 # /Library/Receipts/Office_2011*
 # /private/var/db/receipts/com.microsoft.office*
 
-folders=("/Library/Automator"
-"/Library/Application Support/Microsoft"
-"/Library/Fonts/Microsoft"
-"/Library/Internet Plug-Ins"
-"/Library/Receipts/Office_2011*"
+folders=("/Library/Automator" \
+"/Library/Application Support/Microsoft" \
+"/Library/Internet Plug-Ins" \
+"/Library/Receipts/Office_2011*" \
 "/private/var/db/receipts/com.microsoft*")
 
 delete
@@ -91,7 +90,7 @@ delete
 # ~/Documents/Microsoft User Data/
 # ~/Documents/Microsoft 用户数据/
 
-folders=("$HOME/Documents/Microsoft User Data"
+folders=("$HOME/Documents/Microsoft User Data" \
 "$HOME/Documents/Microsoft 用户数据")
 
 delete
