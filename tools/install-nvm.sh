@@ -6,25 +6,23 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-export NVM_DIR=~/.nvm
+# import common.sh
+CUR_DIR=$(cd $(dirname $0) && pwd)
+source $CUR_DIR/../lib/common.sh
 
 # install nvm
-if ! brew list nvm 1> /dev/null 2> /dev/null
-then
-    brew install nvm
-fi
+brewInstall nvm
 
 # create nvm home folder
+export NVM_DIR=~/.nvm
 if [ ! -d $NVM_DIR ]
 then
+    info "start create folder $NVM_DIR"
     mkdir $NVM_DIR
 fi
 
 # register nvm startup script
 CUR_DIR=$(cd $(dirname $0) && pwd)
-if [ -e $CUR_DIR/../config/nvm-config.sh ] && ! grep -p "nvm-config.sh" ~/.zshrc
-then
-    echo "" >> ~/.zshrc
-    echo "# register nvm startup script into .zshrc" >> ~/.zshrc
-    echo "source $CUR_DIR/../config/nvm-config.sh" >> ~/.zshrc
-fi
+CONFIG_FILE="$CUR_DIR/../config/nvm-config.sh"
+
+registerInZshrc "$CONFIG_FILE" "register nvm config script"
