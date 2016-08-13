@@ -1,2 +1,1 @@
-- `tools`目录下是常用脚本
-- `config`目录下是常用配置
+Mac OS X下的常用Shell脚本
