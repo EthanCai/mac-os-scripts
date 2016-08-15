@@ -36,6 +36,13 @@ function brewInstall() {
     typeset appName
     appName=$1
 
+    # check whether Homebrew is installed
+    if ! hash brew 2>/dev/null
+    then
+        echo "Homebrew isn't installed. Please install it first."
+        return 1
+    fi
+
     if ! brew list $appName 1> /dev/null 2> /dev/null
     then
         info "start install $appName "
