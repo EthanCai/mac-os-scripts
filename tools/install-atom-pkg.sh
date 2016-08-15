@@ -1,0 +1,52 @@
+#!/bin/bash
+
+apm install atom-beautify@0.29.10
+apm install autocomplete-go@1.1.0
+apm install autocomplete-python@1.8.6
+apm install build@0.65.0
+apm install build-make@0.10.0
+apm install builder-go@1.0.0
+apm install busy@0.6.0
+apm install color-picker@2.2.2
+apm install environment@1.2.0
+apm install file-icons@1.7.18
+apm install git-log@0.4.1
+apm install git-plus@5.16.2
+apm install git-time-machine@1.5.3
+apm install go-config@1.2.1
+apm install go-get@1.0.3
+apm install go-plus@4.1.0
+apm install gofmt@1.1.6
+apm install gometalinter-linter@1.1.0
+apm install gorename@1.0.2
+apm install graphviz-preview@1.7.0
+apm install hyperclick-markdown@0.1.3
+apm install jsformat@0.9.3
+apm install language-dot@1.6.0
+apm install linter@1.11.16
+apm install linter-clang@3.4.4
+apm install markdown-folder@0.5.0
+apm install markdown-image-helper@1.0.4
+apm install markdown-preview-plus@2.4.0
+apm install markdown-scroll-sync@2.1.2
+apm install markdown-table-formatter@2.8.3
+apm install markdown-toc@0.4.1
+apm install markdown-writer@2.5.1
+apm install minimap@4.24.7
+apm install minimap-git-diff@4.3.1
+apm install navigator-godef@1.0.3
+apm install open-terminal-here@2.1.4
+apm install pdf-view@0.50.0
+apm install pigments@0.31.2
+apm install pretty-json@1.6.0
+apm install python-tools@0.6.8
+apm install refactor@0.9.2
+apm install script@3.9.0
+apm install split-diff@1.0.4
+apm install tablr@1.3.2
+apm install tabs-to-spaces@1.0.2
+apm install term3@0.22.1
+apm install tester-go@1.0.4
+apm install vim-mode@0.65.1
+
+apm upgrade

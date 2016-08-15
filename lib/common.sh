@@ -71,3 +71,17 @@ function registerInZshrc() {
     echo "source $filePath" >> ~/.zshrc
     return 0
 }
+
+# create directory
+function createDir() {
+    typeset dirPath
+    dirPath=$1
+
+    if [ ! -d $dirPath ]
+    then
+        info "create folder \"$dirPath\""
+        mkdir -p "$dirPath"
+    else
+        warning "folder \"$dirPath\" already exists"
+    fi
+}

@@ -16,6 +16,9 @@ brewInstall go
 # install glide
 brewInstall glide
 
+# create GOPATH
+createDir ~/go
+
 # set GOPATH and PATH
 CUR_DIR=$(cd $(dirname $0) && pwd)
 CONFIG_FILE="$CUR_DIR/../config/go-config.sh"

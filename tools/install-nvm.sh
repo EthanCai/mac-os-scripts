@@ -15,11 +15,7 @@ brewInstall nvm
 
 # create nvm home folder
 export NVM_DIR=~/.nvm
-if [ ! -d $NVM_DIR ]
-then
-    info "start create folder $NVM_DIR"
-    mkdir $NVM_DIR
-fi
+createDir $NVM_DIR
 
 # register nvm startup script
 CUR_DIR=$(cd $(dirname $0) && pwd)
