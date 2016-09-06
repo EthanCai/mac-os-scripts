@@ -7,3 +7,4 @@ cnpm install -g webpack
 cnpm install -g http-server
 cnpm install -g node-uuid
 cnpm install -g hexo-cli
+cnpm install -g gulp
