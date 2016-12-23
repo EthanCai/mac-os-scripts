@@ -7,3 +7,8 @@ cnpm install -g http-server
 cnpm install -g node-uuid
 cnpm install -g hexo-cli
 cnpm install -g gulp
+cnpm install -g gulp-cli
+cnpm install -g yo
+
+echo "installed npm packages"
+cnpm list -g --depth=0
