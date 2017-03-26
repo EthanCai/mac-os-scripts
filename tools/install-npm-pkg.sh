@@ -9,6 +9,7 @@ cnpm install -g hexo-cli --save
 cnpm install -g gulp --save
 cnpm install -g gulp-cli --save
 cnpm install -g yo --save
+cnpm install -g hexo-cli
 
 echo "installed npm packages"
 cnpm list -g --depth=0
