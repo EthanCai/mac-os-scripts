@@ -19,6 +19,6 @@ createDir $NVM_DIR
 
 # register nvm startup script
 CUR_DIR=$(cd $(dirname $0) && pwd)
-CONFIG_FILE="$CUR_DIR/../config/nvm-config.sh"
+CONFIG_FILE="$CUR_DIR/../config/nvm-init.sh"
 
 registerInZshrc "$CONFIG_FILE" "register nvm config script"
