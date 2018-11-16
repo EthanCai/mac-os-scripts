@@ -1,14 +1,14 @@
 #!/bin/bash
 
-npm install -g cnpm --registry=https://registry.npm.taobao.org --save
-cnpm install -g bower --save
-cnpm install -g webpack --save
-cnpm install -g http-server --save
-cnpm install -g node-uuid --save
-cnpm install -g hexo-cli --save
-cnpm install -g gulp --save
-cnpm install -g gulp-cli --save
-cnpm install -g yo --save
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+cnpm install -g bower
+cnpm install -g webpack
+cnpm install -g http-server
+cnpm install -g node-uuid
+cnpm install -g hexo-cli
+cnpm install -g gulp
+cnpm install -g gulp-cli
+cnpm install -g yo
 cnpm install -g hexo-cli
 
 echo "installed npm packages"
